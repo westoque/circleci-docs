@@ -43,8 +43,8 @@ test:
     - bundle exec rspec:
         parallel: true
         files:
-          - spec/unit/sample.rb   # can be a direct path to file
-          - spec/**/*.rb          # or a glob (ruby globs)
+          - spec/unit/sample_spec.rb   # can be a direct path to file
+          - spec/**/*_spec.rb          # or a glob (ruby globs)
 ```
 
 **Note:**  
@@ -113,8 +113,8 @@ test:
     - bundle exec rspec --format progress --format RspecJunitFormatter --out $CIRCLE_TEST_REPORTS/rspec.xml:
         parallel: true
         files:
-          - spec/unit/sample.rb   # can be a direct path to file
-          - spec/**/*.rb          # or a glob (ruby globs)
+          - spec/unit/sample_spec.rb   # can be a direct path to file
+          - spec/**/*_spec.rb          # or a glob (ruby globs)
 ```
 
 The same principle applies to Cucumber tests — to enable automatic test
